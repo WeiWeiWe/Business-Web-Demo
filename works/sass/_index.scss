@@ -1,0 +1,193 @@
+.service {
+    padding: 50px 0;
+
+    &__title {
+        &__item {
+            text-align: center;
+        }
+    }
+
+    &__content {
+        &__item {
+            @include ipad {
+                float: none;
+                width: 100%;
+                text-align: center;
+            }
+
+            &__icon {
+                width: 75px;
+                height: 75px;
+                line-height: 75px;
+                text-align: center;
+
+                @include iphone5 {
+                    width: 120px;
+                    height: 120px;
+                    line-height: 120px;
+                }
+
+                &--radius {
+                    background-color: $primary-color;
+                    border-radius: 50%;
+                }
+
+            }
+
+            &__title {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+.history {
+    padding: 100px 0;
+    background-color: #ddd;
+
+    &__item{
+        &__title {
+            margin-bottom: 30px;
+        }
+    
+        &__info {
+            margin-bottom: 30px;
+        }
+    
+        &__content {
+            margin-bottom: 60px;
+        }
+        @include iphone5 {
+            .btn--fluid {
+                display: block;
+                text-align: center;
+                padding: 15px 0;
+            }
+        }
+    }
+    
+    &__photo{
+        &__img{
+            @include desktop{
+                &:hover{
+                    transition: all .5s;
+                    opacity: 0.5;
+                }
+            }       
+        }
+    }
+}
+
+.product {
+    &__item {
+        padding: 0px;
+        position: relative;
+        ;
+        height: 300px;
+
+        @include ipad {
+            width: 50%;
+        }
+
+        @include iphone5 {
+            width: 100%;
+            height: 200px;
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 300px;
+            background-color: rgba(0, 0, 0, .6);
+            z-index: 11;
+
+            @include iphone5 {
+                height: 200px;
+            }
+        }
+
+        &__title {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            letter-spacing: 2px;
+            z-index: 12;
+            text-align: center;
+            line-height: 300px;
+            @include desktop{
+                &:hover{
+                    transition: all .5s;
+                    color: $primary-color;
+                }
+            }
+            @include iphone5 {
+                line-height: 200px;
+            }
+        }
+
+        &__img {
+            width: 100%;
+            height: 300px;
+            position: absolute;
+            z-index: 10;
+            @include iphone5 {
+                width: 100%;
+                height: 200px;
+            }
+        }
+    }
+}
+
+.news {
+    padding: 100px 0;
+
+    &__title {
+        &__item{
+            text-align: center;
+        }       
+    }
+
+    &__item {
+
+        @include iphone5 {
+            text-align: center;
+        }
+        &__img{
+            @include desktop{
+                &:hover{
+                    transition: all .5s;
+                    opacity: 0.5;
+                }
+            }       
+        }
+        &__title {
+            margin-bottom: 20px;
+        }
+
+        &__info {
+            margin-bottom: 20px;
+
+            &__date {
+                &--textColor {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+
+    &__btn {
+        padding-top: 50px;
+        text-align: center;
+    }
+
+    @include iphone5 {
+        .btn--fluid {
+            display: block;
+            text-align: center;
+            padding: 15px 0;
+        }
+    }
+}

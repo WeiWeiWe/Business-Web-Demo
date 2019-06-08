@@ -1,0 +1,29 @@
+@for $i from 1 through 12{
+    .col-#{$i}{
+        width: 100% / 12 * $i;
+        padding: 15px;
+        float: left;
+        @media (max-width: 569px) {
+            width: 100%;
+            float: none;            
+        }
+    }
+};
+
+@mixin desktop{
+    @media (min-width: 1024px){
+        @content
+    }
+};
+
+@mixin ipad{
+    @media (max-width: 768px){
+        @content
+    }
+};
+
+@mixin iphone5{
+    @media (max-width: 569px){
+        @content
+    }
+}

@@ -1,0 +1,27 @@
+* {
+    font-family: "Lato", "微軟正黑體";
+}
+
+p {
+    line-height: 1.7em;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.fixed-width {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+a {
+    color: $text-light;
+    text-decoration: none;
+}

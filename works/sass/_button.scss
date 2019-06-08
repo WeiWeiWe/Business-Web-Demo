@@ -1,0 +1,14 @@
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: $primary-color;
+    color: $text-dark;
+    text-decoration: none;
+
+    @media (min-width: 1024px) {
+        transition: all .3s;
+        &:hover {
+            background-color: #f0dd8c;
+        }
+    }
+}

@@ -1,0 +1,58 @@
+.showMenu {
+    @include iphone5 {
+        display: block;
+        width: 60px;
+        height: 60px;
+        position: relative;
+        float: right;
+
+        &--dash {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            width: 30px;
+            height: 3px;
+            background-color: #fff;
+            transition: all .6s;
+
+            &::before {
+                content: "";
+                width: 30px;
+                height: 3px;
+                background-color: #fff;
+                position: absolute;
+                bottom: 10px;
+                transition: all .6s;
+            }
+
+            &::after {
+                content: "";
+                width: 30px;
+                height: 3px;
+                background-color: #fff;
+                position: absolute;
+                top: 10px;
+                transition: all .6s;
+            }
+        }
+    }
+}
+.showMenu-X{
+    @include iphone5{
+        background-color: rgba(0,0,0,0);
+        &::before{
+            bottom: 0;
+            transform: rotate(45deg);
+        }
+        &::after{
+            top: 0;
+            transform: rotate(-45deg);
+        }
+    }
+}
+.menu-show .nav__menu {
+    max-height: 500px;
+}
